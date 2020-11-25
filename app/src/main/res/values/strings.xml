@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">simple vocabulary</string>
+
+    <string name="search_line" translatable="false">https://dictionary.skyeng.ru/api/public/v1/words/search?search=</string>
+    <string name="empty_answer">Can\'t find this word!</string>
+    <string name="TypeAWord">Type word here...</string>
+    <string name="AddToVocabulary">...and add it to your vocabulary</string>
+    <string name="play">Play</string>
+    <string name="Save">Save</string>
+    <string name="fon" translatable="false">fon</string>
+    <string name="search">Search</string>
+    <string name="vocabulary">Vocabulary</string>
+    <string name="translate">Translate</string>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Просто словарь</string>
+    <string name="empty_answer">Нет такого слова в интернете!</string>
+    <string name="TypeAWord">Наберите тут слово...</string>
+    <string name="AddToVocabulary">...и добавьте в свой словарь</string>
+    <string name="play">Озвучить</string>
+    <string name="Save">Сохранить в словарь</string>
+    <string name="search">Поиск</string>
+    <string name="vocabulary">Словарь</string>
+    <string name="translate">Перевод</string>
+</resources>

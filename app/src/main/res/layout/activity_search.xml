@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    tools:context=".SearchActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonTabSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:src="@drawable/tab_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/translate"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTabSearch"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTabSearch"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTabSearch"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTabSearch" />
+
+
+    <ImageButton
+        android:id="@+id/imageButtonTabBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:src="@drawable/tab_down"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonTabSearch"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/vocabulary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTabBook"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTabBook"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTabBook"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTabBook" />
+
+    <EditText
+        android:id="@+id/textViewWord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/bezLight"
+        android:hint="@string/TypeAWord"
+        android:inputType="text"
+        android:padding="8dp"
+        android:shadowColor="@color/colorAccent"
+        android:shadowRadius="3"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/gray"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonTabSearch" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSearch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/bezLight"
+        android:contentDescription="@string/search"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/textViewWord"
+        app:srcCompat="@drawable/selector_search" />
+
+    <TextView
+        android:id="@+id/textViewTranslate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/AddToVocabulary"
+        android:padding="5dp"
+        android:textColor="@color/blueLight"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWord" />
+
+    <TextView
+        android:id="@+id/textViewExamples"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTranslate" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSave"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/gray"
+        android:contentDescription="@string/Save"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonSearch"
+        app:srcCompat="@drawable/ques" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/fon"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/fon_med" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bezLight"
+        android:contentDescription="@string/play"
+        android:onClick="playSound"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewWord"
+        app:srcCompat="@drawable/selector_sound" />
+
+    <ListView
+        android:id="@+id/recyclerViewAlt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/bezLightLight"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWord">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
