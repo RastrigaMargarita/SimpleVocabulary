@@ -1,25 +1,14 @@
-package com.margretcraft.simplevocabulary;
+package com.margretcraft.simplevocabulary.model;
 
 import android.app.Application;
 
 import androidx.room.Room;
 
-import com.margretcraft.simplevocabulary.BD.WordDB;
+import com.margretcraft.simplevocabulary.model.BD.WordDB;
 
 public class AppState extends Application {
     private static AppState INSTANCE;
     private static WordDB wordDB;
-
-   // ArrayList<Word> wordList;
-
-  //  public ArrayList<Word> getWordList() {
-  //      return wordList;
-  //  }
-
-   // public void setWordList(ArrayList<Word> wordList) {
-  //      this.wordList = wordList;
-  //  }
-
 
     public static AppState getINSTANCE() {
         return INSTANCE;
@@ -37,7 +26,6 @@ public class AppState extends Application {
                 .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();
-
     }
 
 }

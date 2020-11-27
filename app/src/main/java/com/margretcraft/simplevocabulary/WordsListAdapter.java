@@ -9,17 +9,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.margretcraft.simplevocabulary.model.Word;
+
 import java.util.ArrayList;
 
 public class WordsListAdapter extends RecyclerView.Adapter<WordsListAdapter.AdapterHolder> {
-    private LayoutInflater inflater;
-    //private Context context;
+    private final LayoutInflater inflater;
     ArrayList<Word> wordList;
 
 
     public WordsListAdapter(Context context, ArrayList<Word> wordList) {
         this.inflater = LayoutInflater.from(context);
-       // this.context = context;
         this.wordList = wordList;
     }
 

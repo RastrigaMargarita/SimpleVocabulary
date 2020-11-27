@@ -1,6 +1,5 @@
 package com.margretcraft.simplevocabulary;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -10,15 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.margretcraft.simplevocabulary.BD.WordDB;
-import com.margretcraft.simplevocabulary.BD.WordDao;
+import com.margretcraft.simplevocabulary.model.AppState;
+import com.margretcraft.simplevocabulary.model.BD.WordDB;
+import com.margretcraft.simplevocabulary.model.BD.WordDao;
+import com.margretcraft.simplevocabulary.model.Word;
 
 import java.util.ArrayList;
 
 public class BookActivity extends AppCompatActivity {
     ArrayList<Word> wordList;
     RecyclerView recyclerViewBook;
-   // WordDBHelper wordDBHelper;
     ImageButton changeTab;
     WordDB db;
     WordDao wordDao;
@@ -32,22 +32,20 @@ public class BookActivity extends AppCompatActivity {
         recyclerViewBook.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewBook.setHasFixedSize(true);
 
-        db = AppState.getINSTANCE().getWordDB();
+        db = AppState.getWordDB();
         wordDao = db.worddao();
 
         wordList = (ArrayList<Word>) wordDao.getAll();
         WordsListAdapter wordsListAdapter = new WordsListAdapter(this, wordList);
         recyclerViewBook.setAdapter(wordsListAdapter);
 
-        //wordDBHelper = new WordDBHelper(getApplicationContext());
-
         changeTab = findViewById(R.id.imageButtonTabBook2);
         changeTab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
-                startActivity(intent);
-                closeThisActivity();
+               // Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+               // startActivity(intent);
+              //  closeThisActivity();
             }
         });
     }
@@ -63,19 +61,4 @@ public class BookActivity extends AppCompatActivity {
         finish();
     }
 
-//    private void readBD() {
-//        SQLiteDatabase database = wordDBHelper.getReadableDatabase();
-//        Cursor cursor = database.query(WordConstract.WordEntry.TABLE_NAME, null, null, null, null, "", "");
-//        while (cursor.moveToNext()) {
-//            wordList.add(new Word(cursor.getString(cursor.getColumnIndex(WordConstract.WordEntry.COLUMN_WORD)),
-//                    cursor.getString(cursor.getColumnIndex(WordConstract.WordEntry.COLUMN_TRANSLATE)),
-//                    cursor.getString(cursor.getColumnIndex(WordConstract.WordEntry.COLUMN_EXAMPLES)),
-//                    cursor.getInt(cursor.getColumnIndex(WordConstract.WordEntry.COLUMN_REPITING)),
-//                    cursor.getString(cursor.getColumnIndex(WordConstract.WordEntry.COLUMN_PATHTOSOUND)),
-//                    cursor.getInt(cursor.getColumnIndex(WordConstract.WordEntry._ID))));
-//
-//        }
-//        cursor.close();
-//        database.close();
-//    }
 }

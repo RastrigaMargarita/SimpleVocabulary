@@ -1,4 +1,4 @@
-package com.margretcraft.simplevocabulary;
+package com.margretcraft.simplevocabulary.model;
 
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -21,7 +21,6 @@ public class Word {
         this.examples = examples;
         this.repiting = repiting;
         this.pathToSound = pathToSound;
-        //this._ID = ID;
     }
     public Word(String word) {
         this.word = word;

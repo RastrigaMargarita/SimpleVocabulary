@@ -11,5 +11,9 @@
     <string name="search">Search</string>
     <string name="vocabulary">Vocabulary</string>
     <string name="translate">Translate</string>
+    <string name="learn">Learn</string>
+    <string name="AlreadyAdded">Слово уже есть в словаре</string>
+    <string name="Added">Слово добавлено в словарь</string>
+    <string name="todo">Action</string>
 
 </resources>

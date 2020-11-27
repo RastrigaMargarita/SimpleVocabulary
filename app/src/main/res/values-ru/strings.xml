@@ -9,4 +9,8 @@
     <string name="search">Поиск</string>
     <string name="vocabulary">Словарь</string>
     <string name="translate">Перевод</string>
+    <string name="learn">Учить</string>
+    <string name="AlreadyAdded">Слово уже есть в словаре</string>
+    <string name="Added">Слово добавлено в словарь</string>
+    <string name="todo">Action</string>
 </resources>

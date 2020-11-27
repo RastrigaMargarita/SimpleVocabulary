@@ -1,4 +1,4 @@
-package com.margretcraft.simplevocabulary.BD;
+package com.margretcraft.simplevocabulary.model.BD;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.margretcraft.simplevocabulary.Word;
+import com.margretcraft.simplevocabulary.model.Word;
 
 import java.util.List;
 

@@ -7,7 +7,7 @@
     android:background="@color/gray"
     android:paddingStart="4dp"
     android:paddingEnd="4dp"
-    tools:context=".SearchActivity">
+    >
 
     <ImageButton
         android:id="@+id/imageButtonTabSearch"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageButtonTabBook" />
 
     <EditText
-        android:id="@+id/textViewWord"
+        android:id="@+id/textViewWordold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -78,7 +78,7 @@
         android:background="@color/bezLight"
         android:contentDescription="@string/search"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/textViewWord"
+        app:layout_constraintTop_toTopOf="@+id/textViewWordold"
         app:srcCompat="@drawable/selector_search" />
 
     <TextView
@@ -94,10 +94,9 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonSave"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewWord" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewWordold" />
 
     <TextView
-        android:id="@+id/textViewExamples"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="5dp"
@@ -140,7 +139,7 @@
         android:paddingStart="4dp"
         android:paddingEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewWord"
+        app:layout_constraintTop_toTopOf="@+id/textViewWordold"
         app:srcCompat="@drawable/selector_sound" />
 
     <ListView
@@ -154,7 +153,7 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewWord">
+        app:layout_constraintTop_toBottomOf="@+id/textViewWordold">
 
     </ListView>
 

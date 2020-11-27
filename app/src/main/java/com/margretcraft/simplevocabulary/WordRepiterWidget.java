@@ -43,7 +43,7 @@ public class WordRepiterWidget extends AppWidgetProvider {
 
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
         Log.i("my", meaning);
-        views.setTextViewText(R.id.textViewWord, meaning);
+        views.setTextViewText(R.id.textViewWordold, meaning);
         try {
             JSONObject jsonObject = new JSONObject(meaning);
             //String city = jsonObject.getString("definition");
@@ -52,7 +52,7 @@ public class WordRepiterWidget extends AppWidgetProvider {
             //String description = jsonObject.getJSONArray("weather").getJSONObject(0).getString("description");
             //String weather = String.format("%s\nРўРµРјРїРµСЂР°С‚СѓСЂР°: %s\nРќР° СѓР»РёС†Рµ: %s", city, temp, description);
             //textViewWeather.setText(weather);
-            views.setTextViewText(R.id.textViewWord, temp);
+            views.setTextViewText(R.id.textViewWordold, temp);
 
         } catch (JSONException e) {
             e.printStackTrace();
