@@ -1,4 +1,4 @@
-package com.margretcraft.simplevocabulary.model.ui.searchGroup;
+package com.margretcraft.simplevocabulary.ui.searchGroup;
 
 import android.content.Context;
 import android.os.Bundle;

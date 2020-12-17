@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.margretcraft.simplevocabulary.model.AppState;
 import com.margretcraft.simplevocabulary.model.BD.WordDB;
 import com.margretcraft.simplevocabulary.model.BD.WordDao;
 import com.margretcraft.simplevocabulary.model.Word;

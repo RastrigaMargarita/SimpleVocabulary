@@ -1,4 +1,4 @@
-package com.margretcraft.simplevocabulary.model.ui.dashboard;
+package com.margretcraft.simplevocabulary.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.margretcraft.simplevocabulary.model.ui.notifications;
+package com.margretcraft.simplevocabulary.ui.notifications;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
