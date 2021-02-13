@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_learn"
-        android:name="com.margretcraft.simplevocabulary.ui.notifications.NotificationsFragment"
+        android:name="com.margretcraft.simplevocabulary.ui.bookGroup.BookFragment"
         android:label="@string/learn"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_book" />
 </navigation>
